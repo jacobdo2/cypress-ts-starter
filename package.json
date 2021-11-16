@@ -1,0 +1,11 @@
+{
+  "name": "cypress-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "jedondfds",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^9.0.0",
+    "typescript": "^4.4.4"
+  }
+}
