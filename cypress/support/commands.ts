@@ -10,7 +10,16 @@
 //
 //
 // -- This is a parent command --
-Cypress.Commands.add("dataCy", (id: string) => cy.get(`[data-cy="${id}"]`));
+
+/**
+ * Custom command to select DOM element by data-cy attribute.
+ * @example cy.dataCy('greeting')
+ */
+
+Cypress.Commands.add("dataCy", (id) => {
+  return cy.get(`[data-cy="${id}"]`);
+});
+
 //
 //
 // -- This is a child command --

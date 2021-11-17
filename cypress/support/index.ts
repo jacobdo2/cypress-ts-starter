@@ -22,13 +22,12 @@ import "./commands";
 // in cypress/support/index.ts
 // load type definitions that come with Cypress module
 /// <reference types="cypress" />
+export {};
 
-declare namespace Cypress {
-  interface Chainable {
-    /**
-     * Custom command to select DOM element by data-cy attribute.
-     * @example cy.dataCy('greeting')
-     */
-    dataCy(value: string): Chainable<Element>;
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      dataCy(id: string): Cypress.Chainable<JQuery<HTMLElement>>;
+    }
   }
 }
